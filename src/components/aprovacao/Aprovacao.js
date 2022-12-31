@@ -1,7 +1,7 @@
 import { useQuery } from "@apollo/client";
 import { CircularProgress } from "@mui/material";
 import { Box } from "@mui/system";
-import { Button, Table } from "flowbite-react";
+import { Table } from "flowbite-react";
 import React, { useState } from "react";
 import { FiPlus } from "react-icons/fi";
 import { Link } from "react-router-dom";

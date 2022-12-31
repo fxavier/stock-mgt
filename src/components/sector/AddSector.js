@@ -8,6 +8,7 @@ import { GET_PROVINCIAS, GET_SECTORES } from "../../graphql/queries";
 
 const AddSector = () => {
 	const [showModal, setShowModal] = useState(false);
+	// eslint-disable-next-line
 	const [provincias, setProvincias] = useState([]);
 	const [provinciaId, setProvinciaId] = useState(0);
 	const [nome, setNome] = useState("");

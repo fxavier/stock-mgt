@@ -1,11 +1,12 @@
 import format from "date-fns/format";
 import { Table } from "flowbite-react";
 import React from "react";
-import { FaEye, FaTrash } from "react-icons/fa";
+import { FaEye } from "react-icons/fa";
 import { MdApproval } from "react-icons/md";
 import { Link, useParams } from "react-router-dom";
 
 const RequisicaoRow = ({ requisicao }) => {
+	// eslint-disable-next-line
 	const { id } = useParams();
 	return (
 		<Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">

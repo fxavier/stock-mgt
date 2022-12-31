@@ -27,7 +27,9 @@ const AddEntrada = () => {
 	];
 
 	const [showModal, setShowModal] = useState(false);
+	// eslint-disable-next-line
 	const [provincias, setProvincias] = useState([]);
+	// eslint-disable-next-line
 	const [sectores, setSectores] = useState([]);
 	const [instrumentos, setInstrumentos] = useState([]);
 	const [sectorId, setSectorId] = useState(0);
@@ -40,6 +42,7 @@ const AddEntrada = () => {
 	);
 
 	const [quantidade, setQuantidade] = useState(0);
+	// eslint-disable-next-line
 	const [userId, setUserId] = useState(1);
 
 	const { loading, error, data } = useQuery(GET_PROVINCIAS);

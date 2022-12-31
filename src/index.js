@@ -2,11 +2,24 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
+import { AuthProvider } from "./context/AuthContext";
+import { ApolloProvider } from "@apollo/client";
+import { Route, Routes } from "react-router-dom";
+import client from "./ApolloClient";
+import { BrowserRouter as Router } from "react-router-dom";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
 	<React.StrictMode>
-		<App />
+		<AuthProvider>
+			<ApolloProvider client={client}>
+				<Router>
+					<Routes>
+						<Route path="/*" element={<App />} />
+					</Routes>
+				</Router>
+			</ApolloProvider>
+		</AuthProvider>
 	</React.StrictMode>
 );
 

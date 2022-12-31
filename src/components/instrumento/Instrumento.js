@@ -9,6 +9,7 @@ import InstrumentoSearch from "./InstrumentoSearch";
 
 const Instrumento = () => {
 	const [page, setPage] = useState(1);
+	// eslint-disable-next-line
 	const [search, setSearch] = useState("");
 	const [searchResults, setSearchResults] = useState([]);
 	const { loading, error, data } = useQuery(GET_INSTRUMENTOS, {

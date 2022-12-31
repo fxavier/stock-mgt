@@ -165,10 +165,26 @@ const ADD_APROVACOES = gql`
 	}
 `;
 
+const LOGIN = gql`
+	mutation loginUser($email: String!, $password: String!) {
+		loginUser(email: $email, password: $password) {
+			user {
+				id
+				name
+				email
+				password
+			}
+			access
+			refresh
+		}
+	}
+`;
+
 export {
 	ADD_SECTOR,
 	ADD_INSTRUMENTO,
 	ADD_ENTRADA,
 	ADD_REQUISICAO,
 	ADD_APROVACOES,
+	LOGIN,
 };

@@ -7,10 +7,12 @@ import ResumoTableRow from "./ResumoTableRow";
 
 const ResumoTable = () => {
 	const [page, setPage] = useState(1);
+	// eslint-disable-next-line
 	const [search, setSearch] = useState("");
+	// eslint-disable-next-line
 	const [searchResults, setSearchResults] = useState([]);
 	const { loading, error, data } = useQuery(GET_RESUMOS);
-
+	// eslint-disable-next-line
 	const resumoData = data.resumo;
 
 	if (loading)
@@ -25,13 +27,13 @@ const ResumoTable = () => {
 	// const resumo =
 	// 	searchResults.length > 0 ? searchResults : data.requisicoes.results;
 
-	const onPaginateFront = () => {
-		setPage(page + 1);
-	};
+	// const onPaginateFront = () => {
+	// 	setPage(page + 1);
+	// };
 
-	const onPaginateBack = () => {
-		setPage(page - 1);
-	};
+	// const onPaginateBack = () => {
+	// 	setPage(page - 1);
+	// };
 
 	return (
 		<>

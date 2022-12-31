@@ -11,9 +11,12 @@ const AddAprovacao = () => {
 	];
 
 	const [requisicaoId, setRequisicaoId] = useState(0);
+	// eslint-disable-next-line
 	const [requisicao, setRequisicao] = useState([]);
 	const [comentario, setComentario] = useState("");
+	// eslint-disable-next-line
 	const [userId, setUserId] = useState(1);
+	// eslint-disable-next-line
 	const [aprovacao, setAprovacao] = useState([]);
 	const [tipoAprovacaoNome, setTipoAprovacaoNome] = useState("");
 

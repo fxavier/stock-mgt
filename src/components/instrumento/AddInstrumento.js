@@ -11,13 +11,15 @@ import {
 
 const AddInstrumento = () => {
 	const [showModal, setShowModal] = useState(false);
+	// eslint-disable-next-line
 	const [provincias, setProvincias] = useState([]);
+	// eslint-disable-next-line
 	const [sectores, setSectores] = useState([]);
 	const [sectorId, setSectorId] = useState(0);
 	const [provinciaId, setProvinciaId] = useState(0);
 	const [nome, setNome] = useState("");
 	const [stock, setStock] = useState(0);
-	const [ano, setAno] = useState(0);
+	const [ano, setAno] = useState(2022);
 	const [quantidadeNecessaria, setQuantidadeNecessaria] = useState(0);
 
 	const { loading, error, data } = useQuery(GET_PROVINCIAS);
@@ -37,13 +39,7 @@ const AddInstrumento = () => {
 			provinciaId,
 			sectorId,
 		},
-		update(cache, { data: { addInstrumento } }) {
-			const [instrumentos] = cache.readQuery({ query: GET_INSTRUMENTOS });
-
-			cache.writeQuery({
-				data: { instrumentos: [...instrumentos, addInstrumento] },
-			});
-		},
+		refetchQueries: [{ query: GET_INSTRUMENTOS }],
 	});
 
 	const handleProvincias = (cod) => {
@@ -65,7 +61,7 @@ const AddInstrumento = () => {
 	const clearFields = () => {
 		setNome("");
 		setStock(0);
-		setAno(0);
+		setAno(2022);
 		setQuantidadeNecessaria(0);
 	};
 

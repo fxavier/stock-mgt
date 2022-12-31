@@ -204,6 +204,17 @@ const GET_RESUMOS = gql`
 	}
 `;
 
+const GET_RESUMO_VISUALIZACOES = gql`
+	query getResumoVisualizacoes {
+		resumoVisualizacoes {
+			instrumento
+			echoMisau
+			necessidade
+			stockActual
+		}
+	}
+`;
+
 const GET_APROVACOES = gql`
 	query getAprovacoes {
 		aprovacoes {
@@ -255,4 +266,5 @@ export {
 	GET_APROVACOES,
 	GET_REQUISICOES_PENDENTES,
 	GET_INSTRUMENTO,
+	GET_RESUMO_VISUALIZACOES,
 };

@@ -20,9 +20,12 @@ import {
 
 const AddRequisicao = () => {
 	const [showModal, setShowModal] = useState(false);
+	// eslint-disable-next-line
 	const [provincias, setProvincias] = useState([]);
+	// eslint-disable-next-line
 	const [sectores, setSectores] = useState([]);
 	const [instrumentos, setInstrumentos] = useState([]);
+	// eslint-disable-next-line
 	const [sectorId, setSectorId] = useState(0);
 	const [provinciaId, setProvinciaId] = useState(0);
 	const [instrumentoId, setInstrumentoId] = useState(0);
@@ -31,6 +34,7 @@ const AddRequisicao = () => {
 	);
 
 	const [quantidade, setQuantidade] = useState(0);
+	// eslint-disable-next-line
 	const [userId, setUserId] = useState(1);
 
 	const { loading, error, data } = useQuery(GET_PROVINCIAS);

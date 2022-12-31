@@ -11,12 +11,15 @@ const AprovarRequisicao = () => {
 		{ id: 1, name: "Aprovada" },
 		{ id: 2, name: "Rejeitada" },
 	];
+	// eslint-disable-next-line
 	const [requisicaoId, setRequisicaoId] = useState(0);
 	const [comentario, setComentario] = useState("");
+	// eslint-disable-next-line
 	const [userId, setUserId] = useState(1);
+	// eslint-disable-next-line
 	const [aprovacao, setAprovacao] = useState([]);
 	const [tipoAprovacaoNome, setTipoAprovacaoNome] = useState("");
-
+	// eslint-disable-next-line
 	const { loading, error, data } = useQuery(GET_REQUISICOES);
 
 	const [addAprovacao] = useMutation(ADD_APROVACOES, {
